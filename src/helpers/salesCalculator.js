@@ -1,10 +1,13 @@
-import {bestSellingTv} from "../constants/inventory.js";
+import {bestSellingTv, inventory} from "../constants/inventory.js";
 
 function salesCalculator() {
     let total = 0
-    for (let i = 0; i < bestSellingTv.length; i++) {
-       total += bestSellingTv.sold;
+
+    for (const tv of inventory) {
+        total += tv.sold;
     }
+
     return total;
 }
+
 export default salesCalculator();

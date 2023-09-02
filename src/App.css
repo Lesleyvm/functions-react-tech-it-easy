@@ -1,0 +1,6 @@
+
+ .box {
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: black;
+}
