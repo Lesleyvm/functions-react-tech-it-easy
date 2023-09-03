@@ -6,23 +6,26 @@ import toBeSoldCalculator from "./helpers/toBeSoldCalculator.js";
 function App() {
 
     return (
-        <>
+        <main className={"page-container"}>
             <h1>Tech It Easy Dashboard</h1>
-            <h2>Verkoopoverzicht</h2>
-            <div className={"sold box"}>
-                <p>Aantal verkochte producten</p>
-                <p>{salesCalculator}</p>
-            </div>
-            <div className={"stock box"}>
-                <p>Aantal ingekochte producten</p>
-                <p>{stockCalculator}</p>
-            </div>
-            <div className={"toSell box"}>
-                <p>Aantal te verkopen producten</p>
-                <p>{toBeSoldCalculator}</p>
-            </div>
-            <h2>Best verkochte TV</h2>
-        </>
+            <section>
+                <h2>Verkoopoverzicht</h2>
+                <div className={"dashboard-container"}>
+                    <article className={"dashboard-item items-sold"}>
+                        <h3>Aantal verkochte producten</h3>
+                        <h2>{salesCalculator}</h2>
+                    </article>
+                    <article className={"dashboard-item items-stock"}>
+                        <h3>Aantal ingekochte producten</h3>
+                        <h2>{stockCalculator}</h2>
+                    </article>
+                    <article className={"dashboard-item items-to-sell"}>
+                        <h3>Aantal te verkopen producten</h3>
+                        <h2>{toBeSoldCalculator}</h2>
+                    </article>
+                </div>
+            </section>
+        </main>
     );
 }
 

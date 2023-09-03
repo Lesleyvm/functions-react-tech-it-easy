@@ -11,3 +11,11 @@ function toBeSoldCalculator() {
 }
 
 export default toBeSoldCalculator();
+
+// function calculateProductsToSell(productArray) {
+//     const initialProducts = calculateInitialStock(productArray);
+//     const soldProducts = calculateSoldProducts(productArray);
+//     return initialProducts - soldProducts;
+// }
+//
+// export default calculateProductsToSell;
