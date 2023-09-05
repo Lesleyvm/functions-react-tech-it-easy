@@ -40,3 +40,15 @@
     background-color: lightcoral;
 }
 
+/*------------------------*/
+
+.best-sold-image {
+    width: 50%;
+    height: auto;
+}
+
+.best-sold-container {
+    border: 2px dashed black;
+    padding: 25px;
+    background-color: lightyellow;
+}

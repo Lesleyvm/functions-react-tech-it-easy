@@ -3,9 +3,9 @@ import salesCalculator from "./helpers/salesCalculator.js";
 import stockCalculator from "./helpers/stockCalculator.js";
 import toBeSoldCalculator from "./helpers/toBeSoldCalculator.js";
 import {bestSellingTv, inventory} from "./constants/inventory.js";
-import generateProductName from "./helpers/generateProductName.js";
 import priceGenerator from "./helpers/priceGenerator.js";
-import screenSizeGenerator from "./helpers/screenSizeGenerator.js";
+import generateTvName from "./helpers/generateTvName.js";
+import sizeList from "./helpers/screenSizeGenerator.js";
 
 function App() {
 
@@ -32,14 +32,26 @@ function App() {
             <h2>Best Verkochte TV</h2>
             <section>
                 <div className={"best-sold-container"}>
-                    <span> image </span>
+                    <span className={"best-sold-image"}><img src={bestSellingTv.sourceImg} alt="image bestseller"/></span>
                     <article>
-                        <h3>{generateProductName(bestSellingTv)}</h3>
+                        <h3>{generateTvName(bestSellingTv)}</h3>
                         <h2>{priceGenerator(bestSellingTv)}</h2>
-                        <h2>{screenSizeGenerator(bestSellingTv)}</h2>
+                        <h3>{sizeList}</h3>
+                        <ul>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                            <li><img src="" alt=""/></li>
+                        </ul>
                     </article>
                 </div>
             </section>
+            <h2>Alle TVs</h2>
+            <button></button>
+            <button></button>
+            <button></button>
         </main>
     );
 }

@@ -1,5 +1,8 @@
-function screenSizeGenerator(tv) {
-    return `${tv.availableSizes} inch (${tv.availableSizes * 2,54} cm) | `
-}
+import {bestSellingTv} from "../constants/inventory.js";
 
-export default screenSizeGenerator;
+const sizeList = bestSellingTv.availableSizes.map((size) => {
+    const cmSize = Math.round(size * 2.54);
+    return `${size} inch (${cmSize} cm) | `
+})
+
+export default sizeList;
