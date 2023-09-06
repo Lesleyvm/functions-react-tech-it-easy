@@ -6,6 +6,8 @@ import {bestSellingTv, inventory} from "./constants/inventory.js";
 import priceGenerator from "./helpers/priceGenerator.js";
 import generateTvName from "./helpers/generateTvName.js";
 import sizeList from "./helpers/screenSizeGenerator.js";
+import check from "./assets/check.png";
+import minus from "./assets/minus.png";
 
 function App() {
 
@@ -32,26 +34,25 @@ function App() {
             <h2>Best Verkochte TV</h2>
             <section>
                 <div className={"best-sold-container"}>
-                    <span className={"best-sold-image"}><img src={bestSellingTv.sourceImg} alt="image bestseller"/></span>
+                    <img className={"best-sold-image"} src={bestSellingTv.sourceImg} alt="image bestseller"/>
                     <article>
-                        <h3>{generateTvName(bestSellingTv)}</h3>
+                        <h2>{generateTvName(bestSellingTv)}</h2>
                         <h2>{priceGenerator(bestSellingTv)}</h2>
-                        <h3>{sizeList}</h3>
-                        <ul>
-                            <li><img src="" alt=""/></li>
-                            <li><img src="" alt=""/></li>
-                            <li><img src="" alt=""/></li>
-                            <li><img src="" alt=""/></li>
-                            <li><img src="" alt=""/></li>
-                            <li><img src="" alt=""/></li>
+                        <h4>{sizeList}</h4>
+                        <ul className={"option-list"}>
+                            <li className={"option-item"}><img className="icon" src={check} alt="icon"/>wifi</li>
+                            <li className={"option-item"}><img className="icon" src={minus} alt="icon"/>speech</li>
+                            <li className={"option-item"}><img className="icon" src={check} alt="icon"/>hdr</li>
+                            <li className={"option-item"}><img className="icon" src={check} alt="icon"/>bluetooth</li>
+                            <li className={"option-item"}><img className="icon" src={minus} alt="icon"/>ambilight</li>
                         </ul>
                     </article>
                 </div>
             </section>
             <h2>Alle TVs</h2>
-            <button></button>
-            <button></button>
-            <button></button>
+            <button type={"button"}>Meest verkocht eerst</button>
+            <button type={"button"}>Goedkoopste eerst</button>
+            <button type={"button"}>Meest geschikt voor sport eerst</button>
         </main>
     );
 }

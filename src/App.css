@@ -43,12 +43,38 @@
 /*------------------------*/
 
 .best-sold-image {
-    width: 50%;
-    height: auto;
+    max-width: 30%;
+    height: fit-content;
+    padding: 25px;
 }
 
 .best-sold-container {
     border: 2px dashed black;
     padding: 25px;
     background-color: lightyellow;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0;
+    flex-shrink: 1;
 }
+
+.icon {
+    max-width: 15%;
+    padding: 6px;
+}
+
+.option-list {
+    list-style: none;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    /*border: 2px solid red;*/
+    margin: 1px;
+    padding: 1px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+}
+
